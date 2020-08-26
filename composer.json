@@ -1,0 +1,21 @@
+{
+    "name": "base52/php-base52",
+    "description": "Base 32 Compact",
+    "keywords": ["base32", "base-52", "binary"],
+    "type": "library",
+    "homepage": "https://github.com/base52/php-base52",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andre DeMarre",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "ademarre/binary-to-text-php": "*",
+        "php": "*"
+    },
+    "autoload": {
+        "psr-0": { "Base52": "" }
+    }
+}
