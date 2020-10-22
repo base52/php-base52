@@ -8,8 +8,8 @@ class Base52
 
 	const PARSE_CHARACTERS = 'ABCDEFGHIJabcdefghijklmnopqrstuv';
 	
-    const PARSE_COMPRESS = [
-        'K' => 'AA',
+	const PARSE_COMPRESS = [
+		'K' => 'AA',
 		'L' => 'AAA',
 		'M' => 'AAAA',
 		'N' => 'AAAAA',
@@ -28,20 +28,20 @@ class Base52
 		'w' => 'vvvvvvvv',
 		'x' => 'vvvvvvvvv',
 		'y' => 'vvvvvvvvvv',
-        'z' => 'vvvvvvvvvvv'
+		'z' => 'vvvvvvvvvvv'
 	];
 	
 	private static $_convert = null;
 
-    public static function encode($data)
-    {
-        return self::parse(self::convert($data, self::CONVERT_ENCODE), self::PARSE_COMPRESS, true);
-    }
+	public static function encode($data)
+	{
+		return self::parse(self::convert($data, self::CONVERT_ENCODE), self::PARSE_COMPRESS, true);
+	}
 
-    public static function decode($data)
-    {
-        return self::convert(self::parse($data, self::PARSE_COMPRESS), self::CONVERT_DECODE);
-    }
+	public static function decode($data)
+	{
+		return self::convert(self::parse($data, self::PARSE_COMPRESS), self::CONVERT_DECODE);
+	}
 
 	private static function parse($data, $replace_pairs, $flip = false)
 	{
